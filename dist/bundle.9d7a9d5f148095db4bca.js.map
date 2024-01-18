@@ -1,1 +1,0 @@
-{"version":3,"file":"bundle.9d7a9d5f148095db4bca.js","mappings":"mBACAA,QAAQC,IAAI,K","sources":["webpack://todo-list/./src/index.js"],"sourcesContent":["import { format, formatDistance, formatRelative, subDays } from \"date-fns\";\nconsole.log(\"hi\");\n"],"names":["console","log"],"sourceRoot":""}

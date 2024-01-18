@@ -1,5 +1,78 @@
+:root {
+  --50: #f0f9ff;
+  --100: #e0f2fe;
+  --200: #bae6fd;
+  --300: #7dd3fc;
+  --400: #38bdf8;
+  --500: #0ea5e9;
+  --600: #0284c7;
+  --700: #0369a1;
+  --800: #075985;
+  --900: #082f49;
+  font-size: 20px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.sidebar {
+  background-color: var(--100);
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+
+  padding-top: 100px;
+}
+
+.time-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+.time {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-start;
+}
+i {
+}
+.list-item {
+  list-style: none;
+}
+.div > a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.projects-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+.project {
 }

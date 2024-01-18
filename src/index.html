@@ -3,22 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a7588cd07c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Todo List App</title>
   </head>
   <body>
     <div class="container">
       <div class="sidebar">
-        <input type="search" name="search" placeholder="Search" id="search" />
         <div class="time-container">
-          <div class="today">Today</div>
-          <div class="upcoming">Upcoming</div>
-          <div class="anytime">Anytime</div>
+          <div>
+            <a href="#" class="today time"
+              ><i
+                class="fa-solid fa-exclamation fa-lg"
+                style="color: #ff0000"
+              ></i>
+              Today</a
+            >
+          </div>
+          <div>
+            <a href="#" class="upcoming time"
+              ><i
+                class="fa-solid fa-triangle-exclamation fa-lg"
+                style="color: #ffd43b"
+              ></i
+              >Upcoming</a
+            >
+          </div>
+          <div>
+            <a href="#" class="anytime time"
+              ><i class="fa-solid fa-couch fa-lg" style="color: #63e6be"></i
+              >Anytime</a
+            >
+          </div>
         </div>
         <div class="projects-container">
           <div class="project">
-            <h3>home</h3>
-            <div class="todo-name"><h3>Coock</h3></div>
+            <h3 class="todo-name">home</h3>
+            <ul class="item">
+              <li class="list-item">
+                <a href="#"> Coock</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

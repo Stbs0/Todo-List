@@ -3,12 +3,12 @@ export default function addNewProject(nameProject, nameTodo) {
 
   const project = document.createElement("div");
   project.classList.add("project");
-  project.innerHTML = '<i class="fa-solid fa-layer-group fa-lg"></i>';
+  // project.innerHTML = '<i class="fa-solid fa-layer-group fa-lg"></i>';
   projectContainer.appendChild(project);
   //
-  const projectName = document.createElement("h3");
+  const projectName = document.createElement("button");
   projectName.classList.add("todo-name");
-  projectName.textContent = `${nameProject}`;
+  projectName.innerHTML = `<i class="fa-solid fa-layer-group fa-lg"></i> ${nameProject}`;
 
   project.appendChild(projectName);
   //
@@ -20,9 +20,12 @@ export default function addNewProject(nameProject, nameTodo) {
   const listItem = document.createElement("li");
   listItem.classList.add("list-item");
   unorderList.appendChild(listItem);
-  const todoName = document.createElement("a");
+  const todoName = document.createElement("button");
   todoName.src = "#";
-  todoName.textContent = `${nameTodo}`;
+  todoName.classList.add("todo-name");
+  // add this icon to the added todo
+
+  todoName.innerHTML = `<i class="fa-solid fa-bars fa-lg"></i> ${nameTodo}`;
 
   // todoName.classList.add(`${nameTodo}`); the problem is the space between to word must add a hyphen
   listItem.appendChild(todoName);

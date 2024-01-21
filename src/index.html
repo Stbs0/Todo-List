@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/a7588cd07c.js"
       crossorigin="anonymous"
@@ -10,46 +16,109 @@
     <title>Todo List App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="sidebar">
-        <div class="time-container">
-          <div id="time">
-            <a href="#" class="today time"
-              ><i
-                class="fa-solid fa-exclamation fa-lg"
-                style="color: #ff0000"
-              ></i>
-              Today</a
-            >
+    <div class="wrapper">
+      <div class="container">
+        <div class="sidebar">
+          <div class="time-container">
+            <div id="time">
+              <a href="#" class="today time"
+                ><i class="fa-solid fa-exclamation" style="color: #ff0000"></i>
+                Today</a
+              >
+            </div>
+            <div id="time">
+              <a href="#" class="upcoming time"
+                ><i
+                  class="fa-solid fa-triangle-exclamation"
+                  style="color: #ffd43b"
+                ></i
+                >Upcoming</a
+              >
+            </div>
+            <div id="time">
+              <a href="#" class="anytime time"
+                ><i class="fa-solid fa-couch" style="color: #63e6be"></i
+                >Anytime</a
+              >
+            </div>
           </div>
-          <div id="time">
-            <a href="#" class="upcoming time"
-              ><i
-                class="fa-solid fa-triangle-exclamation fa-lg"
-                style="color: #ffd43b"
-              ></i
-              >Upcoming</a
-            >
-          </div>
-          <div id="time">
-            <a href="#" class="anytime time"
-              ><i class="fa-solid fa-couch fa-lg" style="color: #63e6be"></i
-              >Anytime</a
-            >
-          </div>
+          <div class="projects-container"></div>
         </div>
-        <div class="projects-container">
-          <div class="project">
-            <h3 class="todo-name">home</h3>
-            <ul class="item">
-              <li class="list-item">
-                <a href="#"> Coock</a>
-              </li>
-            </ul>
+        <div class="main">
+          <button class="addbtn">+</button>
+          <dialog class="dialog">
+            <div class="dheading">
+              <p class="dheading-p">create todo</p>
+              <button class="close">X</button>
+            </div>
+            <form method="dialog" action="#">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Finish the project"
+                required
+              />
+              <textarea
+                name="discription"
+                required
+                id="discription"
+                cols="30"
+                rows="10"
+                placeholder="the project is ..."
+              ></textarea>
+              <input type="date" name="date" id="date" required />
+              <fieldset>
+                <legend>priority</legend>
+                <label for="low">
+                  <input type="radio" name="priority" id="low" />Low</label
+                >
+                <label for="meduim"
+                  ><input
+                    type="radio"
+                    name="priority"
+                    id="meduim"
+                  />Medium</label
+                >
+                <label for="high"
+                  ><input type="radio" name="priority" id="high" />high</label
+                >
+              </fieldset>
+              <fieldset>
+                <legend id="add-to-project">add To project</legend>
+              </fieldset>
+              <button class="create-todo">create todo</button>
+            </form>
+          </dialog>
+          <!-- <button class="addbtn">+</button>
+          <div class="heading">
+            <h1 class="todo-name-main">Cook</h1>
+            <div class="discription">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste,
+              nam!
+            </div>
           </div>
+          <div class="checklist-container">
+            <div class="checklist">
+              <input type="checkbox" name="todo" id="todo" />
+              <div class="title-todo">make dinner</div>
+              <div class="due-date">2 days</div>
+              <div class="delete"><i class="fa-solid fa-trash fa-sm"></i></div>
+            </div>
+          </div>
+          <div class="note">
+            <p class="para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              vitae saepe molestiae nam rerum velit, ad esse error. Est ratione
+              voluptas deserunt. Quis dolores animi odio ipsam non mollitia
+              itaque excepturi eos magnam ut modi quisquam suscipit est
+              distinctio, quo quidem libero nobis facere debitis labore aut
+              aspernatur neque! Rerum!
+            </p>
+          </div>
+         -->
         </div>
       </div>
-      <div class="main"></div>
     </div>
   </body>
 </html>

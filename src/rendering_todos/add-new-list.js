@@ -46,7 +46,12 @@ export default function addNewProject() {
     // Append the todo name button to the list item
     listItem.appendChild(todoName);
   }
-
+  addNewProjectName("home");
+  addNewProjectName("work");
+  addNewTodo("clean the house", 1);
+  addNewTodo("do the laundry", 1);
+  addNewTodo("finish the project", 2);
+  addNewTodo("send the email", 2);
   // Return the functions for adding new project names and todos
   return { addNewProjectName, addNewTodo };
 }

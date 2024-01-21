@@ -1,8 +1,6 @@
-import showDialog from "./show_dialog";
-import CreateToDo from "../todo_minipulation/Todo-creator";
 import dueDate from "../todo_minipulation/setting_due_date";
 
-export default function createTodo() {
+export default function fetchTodoItems() {
   const projectNameInp = document.querySelector("#name");
   const descriptionInp = document.querySelector("#discription");
   const dateInp = document.querySelector("#date");
@@ -20,12 +18,5 @@ export default function createTodo() {
 
   const newDate = dueDate(dateInp.value);
 
-  const todo = new CreateToDo(
-    projectNameInp.value,
-    descriptionInp.value,
-    newDate,
-    checkedRadio,
-    ""
-  );
-  return todo;
+  return { projectNameInp, descriptionInp, newDate, checkedRadio };
 }

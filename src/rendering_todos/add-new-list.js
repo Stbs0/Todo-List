@@ -2,8 +2,33 @@ export default function addNewProject() {
   let count = 0;
   const projectContainer = document.querySelector(".projects-container");
   // Function to add a new project name
-  function addNewProjectName(nameProject) {
+  function addNewProjectName() {
     count += 1;
+    function addProject() {
+      let inputValue;
+      const addProjectBtn = document.querySelector(".add-project");
+      const addProjectContainer = document.querySelector(
+        ".add-project-container"
+      );
+      addProjectBtn.addEventListener(
+        "click",
+        () => {
+          const addBtn = addNewProject();
+
+          const inpt = document.createElement("input");
+          addProjectContainer.append(inpt);
+          inpt.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+              inputValue = inpt.value;
+              inpt.remove();
+            }
+          });
+        },
+        "once"
+      );
+      return inputValue;
+    }
+    const projectNameInput = addProject();
 
     // Create a new project div
     const project = document.createElement("div");
@@ -11,9 +36,9 @@ export default function addNewProject() {
     projectContainer.appendChild(project);
 
     // Create a button for the project name
-    const projectName = document.createElement("button");
+    const projectName = document.createElement("h2");
     projectName.classList.add("project-name");
-    projectName.innerHTML = `<i class="fa-solid fa-layer-group"></i> <span class="project-name-text">${nameProject}</span>`;
+    projectName.innerHTML = `<i class="fa-solid fa-layer-group"></i> <span class="project-name-text">${projectNameInput}</span>`;
 
     // Append the project name button to the project div
     project.appendChild(projectName);
@@ -46,12 +71,12 @@ export default function addNewProject() {
     // Append the todo name button to the list item
     listItem.appendChild(todoName);
   }
-  addNewProjectName("home");
-  addNewProjectName("work");
-  addNewTodo("clean the house", 1);
-  addNewTodo("do the laundry", 1);
-  addNewTodo("finish the project", 2);
-  addNewTodo("send the email", 2);
+  // addNewProjectName("home");
+  // addNewProjectName("work");
+  // addNewTodo("clean the house", 1);
+  // addNewTodo("do the laundry", 1);
+  // addNewTodo("finish the project", 2);
+  // addNewTodo("send the email", 2);
   // Return the functions for adding new project names and todos
   return { addNewProjectName, addNewTodo };
 }
